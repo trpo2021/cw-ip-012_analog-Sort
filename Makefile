@@ -1,15 +1,16 @@
 APP_NAME = analog_sort
 LIB_NAME = lib_sort
+TEST_NAME = $(APP_NAME)-test
 
 CFLAGS = -W -Wall -Wextra -Werror
 LFLAGS = -I src -MP -MMD
-
 CC = gcc
-
+#TESTFLAGS = -g
 
 BIN_DIR = bin
 OBJ_DIR = obj
 SRC_DIR = src
+TEST_DIR = test
 
 APP_PATH = $(BIN_DIR)/$(APP_NAME)
 OBJ_PATH = $(OBJ_DIR)/$(ARC_DIR)
