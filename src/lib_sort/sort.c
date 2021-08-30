@@ -3,5 +3,6 @@
 #include <string.h>
 
 void sort(){
-    printf ("Program analog_sort");
+    printf ("Program analog_sort ivan glass");
+        printf ("Program analog_sort ivan glass");
 }
