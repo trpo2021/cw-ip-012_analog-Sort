@@ -1,4 +1,4 @@
-#include "Sort"
+#include <lib_sort/sort.h>
 
 int main(){
 	sort();
