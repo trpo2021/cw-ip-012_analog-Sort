@@ -24,9 +24,8 @@ LIB_OBJECTS = $(LIB_SOURCES:$(SRC_DIR)/%.$(SRC_EXT)=$(OBJ_DIR)/$(SRC_DIR)/%.o)
 
 DEPS = $(APP_OBJECTS:.o=.d) $(LIB_OBJECTS:.o=.d) $(TEST_OBJECTS:.o=.d)
 
--include $(DEPS)
 
-all: $(APP_PATH)
+.PHONY: all
 all: $(APP_PATH)
 
 -include $(DEPS)
