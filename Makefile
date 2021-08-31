@@ -3,7 +3,7 @@ LIB_NAME = lib_sort
 
 
 CFLAGS = -Wall -Wextra -Werror
-LFLAGS = -I src -MP -MMD
+CPPFLAGS = -I src -MP -MMD
 LDFLAGS =
 LDLIBS =
 
