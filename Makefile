@@ -2,7 +2,7 @@ APP_NAME = analog_sort
 LIB_NAME = lib_sort
 
 
-CFLAGS = -W -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 LFLAGS = -I src -MP -MMD
 LDFLAGS =
 LDLIBS =
