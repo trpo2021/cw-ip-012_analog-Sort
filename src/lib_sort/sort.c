@@ -30,19 +30,19 @@ void sort(){
     fclose(f1);
 
   //для сортировки слов по алфавиту будем испльзовать индексный массив
-    int t, ind[n];
+   /* int t, ind[n];
     
     for (i=0; i<n; i++)
     for (j=n-1; j>i; j++){
         if (m[j][0]<m[j-1][0])
             t=ind[j];
             ind[j]=ind[j-1];
-            ind[j-1]=t;
+            ind[j-1]=t;*/
                     
 }
     for (i=0; i<n;i++){
         for (j=0; j>0; j++)
-        printf("%")  
+        printf("\n") ;
     }
     
                         
