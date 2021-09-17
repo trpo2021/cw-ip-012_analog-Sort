@@ -1,6 +1,10 @@
-#include <lib_sort/sort.h>
+#include <lib_sort/arg.h>
+#include <lib_sort/startprog.h>
+
 
 int main(){
-	sort();
+    
+    star();
+	opc();
 	return 0;
 }
