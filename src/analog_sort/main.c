@@ -4,7 +4,8 @@
 
 int main(){
     
-    star();
-	opc();
+    start();
+Params params = {NULL, NULL};
+	opc(&params, argc, argv);
 	return 0;
 }
