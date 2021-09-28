@@ -1,6 +1,7 @@
 APP_NAME = analog_sort
 LIB_NAME = lib_sort
 
+CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 CPPFLAGS = -I src -MP -MMD
