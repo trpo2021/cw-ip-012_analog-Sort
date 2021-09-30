@@ -4,49 +4,50 @@
 #include <stdlib.h>
 #include <string.h>
 
-void print_help() {
-       printf("Доступные аргументы:\n"
-                  "-f <file>\t--\tимя файла на входе\n"
-                  "-o <file>\t--\tимя файла на выходе\n");
-}
- 
-void print_wrong_arg() {
-       printf("Ошибка! Повторный аргумент!\n\n");
+void print_help()
+{
+    printf("Доступные аргументы:\n"
+           "-f <file>\t--\tимя файла на входе\n"
+           "-o <file>\t--\tимя файла на выходе\n");
 }
 
-void opc(Params* params, int argc, char** argv){
-       int i;
-       for (i = 1; i < argc; i++) {
+void print_wrong_arg()
+{
+    printf("Ошибка! Повторный аргумент!\n\n");
+}
+
+void opc(Params* params, int argc, char** argv)
+{
+    int i;
+    for (i = 1; i < argc; i++) {
         if (strcmp(argv[i], "--help") == 0) {
             print_help();
             exit(EXIT_SUCCESS);
         }
     }
-       for (i = 1; i < argc; i++) {
+    for (i = 1; i < argc; i++) {
         if (argv[i][0] == '-') {
             switch (argv[i][1]) {
             case 'f':
-					if (params->input != NULL) {
+                if (params->input != NULL) {
                     print_wrong_arg();
-                                       print_help();
-                                       exit(EXIT_FAILURE);
+                    print_help();
+                    exit(EXIT_FAILURE);
                 }
                 params->input = argv[++i];
                 break;
             case 'o':
                 if (params->output != NULL) {
                     print_wrong_arg();
-                                       print_help();
-                                       exit(EXIT_FAILURE);
+                    print_help();
+                    exit(EXIT_FAILURE);
                 }
                 params->output = argv[++i];
                 break;
-                       default:
-                               printf("Неверный аргумент: %s\n", argv[i]);
-                               exit(EXIT_FAILURE);
-                       }
-		}
-	   }
+            default:
+                printf("Неверный аргумент: %s\n", argv[i]);
+                exit(EXIT_FAILURE);
+            }
+        }
+    }
 }
-
-

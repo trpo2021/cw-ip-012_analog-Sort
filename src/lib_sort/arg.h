@@ -1,7 +1,7 @@
 #ifndef ARG_H
 #define ARG_H
 
-typedef struct _params{
+typedef struct _params {
     char* input;
     char* output;
 } Params;
