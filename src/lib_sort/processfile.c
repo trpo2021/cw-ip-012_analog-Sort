@@ -53,6 +53,6 @@ char** get_lines_from_file(FILE* fin, int* N)
             continue;
         lines[count++] = line;
     }
-	*N = count;
+    *N = count;
     return lines;
 }

@@ -1,7 +1,7 @@
 #include <lib_sort/arg.h>
 #include <lib_sort/processfile.h>
-#include <lib_sort/startprog.h>
 #include <lib_sort/sort.h>
+#include <lib_sort/startprog.h>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,16 +19,16 @@ int main(int argc, char** argv)
         exit(EXIT_FAILURE);
     }
     int N;
-	char** lines = get_lines_from_file(fin, &N);
+    char** lines = get_lines_from_file(fin, &N);
 
-	for (int i = 0; i < N; i++)
-		printf("%2d: %s\n", i, lines[i]);
+    for (int i = 0; i < N; i++)
+        printf("%2d: %s\n", i, lines[i]);
 
-	sort(lines, N);
+    sort(lines, N);
 
-	printf("Sorted\n");
-	for (int i = 0; i < N; i++)
-		printf("%2d: %s\n", i, lines[i]);
+    printf("Sorted\n");
+    for (int i = 0; i < N; i++)
+        printf("%2d: %s\n", i, lines[i]);
 
     return 0;
 }
