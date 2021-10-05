@@ -44,6 +44,15 @@ void opc(Params* params, int argc, char** argv)
                 }
                 params->output = argv[++i];
                 break;
+			case 'r':
+                params->reversed = 1;
+                break;
+			case 'b':
+                params->nospaces = 1;
+                break;
+			case 'u':
+                params->norepeats = 1;
+                break;
             default:
                 printf("Неверный аргумент: %s\n", argv[i]);
                 exit(EXIT_FAILURE);
