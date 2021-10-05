@@ -8,7 +8,11 @@ void print_help()
 {
     printf("Доступные аргументы:\n"
            "-f <file>\t--\tимя файла на входе\n"
-           "-o <file>\t--\tимя файла на выходе\n");
+           "-o <file>\t--\tимя файла на выходе\n"
+           "-r <file>\t--\tсортировать в обратном порядке\n"
+           "-i <file>\t--\tотключить чувствительность к регистру\n"
+           "-u <file>\t--\tудалить повторяющиеся строки\n"
+		  );
 }
 
 void print_wrong_arg()
@@ -47,8 +51,8 @@ void opc(Params* params, int argc, char** argv)
             case 'r':
                 params->reversed = 1;
                 break;
-            case 'b':
-                params->nospaces = 1;
+            case 'i':
+                params->noregister = 1;
                 break;
             case 'u':
                 params->norepeats = 1;

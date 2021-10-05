@@ -5,7 +5,7 @@ typedef struct _params {
     char* input;
     char* output;
     int reversed;
-    int nospaces;
+    int noregister;
     int norepeats;
 } Params;
 
