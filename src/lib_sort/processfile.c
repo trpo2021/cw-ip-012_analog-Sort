@@ -29,7 +29,7 @@ char* get_line(FILE* fin)
     return line;
 }
 
-char** get_lines_from_file(FILE* fin)
+char** get_lines_from_file(FILE* fin, int* N)
 {
     int count = 0;
     int maxline = 2;
@@ -53,5 +53,6 @@ char** get_lines_from_file(FILE* fin)
             continue;
         lines[count++] = line;
     }
+	*N = count;
     return lines;
 }
