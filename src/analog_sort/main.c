@@ -29,7 +29,7 @@ int main(int argc, char** argv)
     printf("Sorted\n");
     for (int i = 0; i < N; i++) {
         printf("%2d: %s\n", i, lines[i]);
-	}
+    }
 
     return 0;
 }

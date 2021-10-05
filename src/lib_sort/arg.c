@@ -44,13 +44,13 @@ void opc(Params* params, int argc, char** argv)
                 }
                 params->output = argv[++i];
                 break;
-			case 'r':
+            case 'r':
                 params->reversed = 1;
                 break;
-			case 'b':
+            case 'b':
                 params->nospaces = 1;
                 break;
-			case 'u':
+            case 'u':
                 params->norepeats = 1;
                 break;
             default:
