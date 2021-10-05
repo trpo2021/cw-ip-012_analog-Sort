@@ -1,5 +1,6 @@
 APP_NAME = analog_sort
 LIB_NAME = lib_sort
+TEST_NAME = Sort_Test
 
 CC = gcc
 
