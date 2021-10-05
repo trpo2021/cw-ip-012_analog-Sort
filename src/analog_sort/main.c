@@ -27,19 +27,19 @@ int main(int argc, char** argv)
     int N;
     char** lines = get_lines_from_file(fin, &N);
 
-	printf("Файл %s\n\n", params.input);
+    printf("Файл %s\n\n", params.input);
     for (int i = 0; i < N; i++)
         printf("%s\n", lines[i]);
 
     sort_process(lines, N, params);
-	
-	if (params.norepeats)
-		lines = remove_repeats(lines, &N);
 
-	if (params.output)
-    	printf("\nЗаписано в %s\n", params.output);
-	else
-		printf("\nВывод:\n\n");
+    if (params.norepeats)
+        lines = remove_repeats(lines, &N);
+
+    if (params.output)
+        printf("\nЗаписано в %s\n", params.output);
+    else
+        printf("\nВывод:\n\n");
     for (int i = 0; i < N; i++) {
         fprintf(fout, "%s\n", lines[i]);
     }

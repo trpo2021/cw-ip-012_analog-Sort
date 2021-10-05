@@ -3,7 +3,7 @@
 
 #include <lib_sort/arg.h>
 
-void sort(char** lines, int N, int (*funcComp)(char*,char*));
+void sort(char** lines, int N, int (*funcComp)(char*, char*));
 
 void sort_process(char** lines, int N, Params params);
 
