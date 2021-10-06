@@ -40,30 +40,29 @@ CTEST(suite_processfile, get_lines_from_file)
 
     
     int N;
-    char **lines = get_lines_from_file(fin, &N);
     
-    char* lines = get_lines_from_file(fin);
+    char **lines = get_lines_from_file(fin, &N);     
     ASSERT_STR("   ", lines[0]);
     ASSERT_EQUAL(11,N);
     
-    char* lines = get_lines_from_file(fin);
-    ASSERT_STR("Math file", lines[1]);
+    char **lines1 = get_lines_from_file(fin, &N);  
+    ASSERT_STR("Math file", lines1[1]);
     ASSERT_EQUAL(11,N);
     
-    char* lines = get_lines_from_file(fin);
-    ASSERT_STR("Math file my program word", lines[2]);
+    char **lines2 = get_lines_from_file(fin, &N);  
+    ASSERT_STR("Math file my program word", lines2[2]);
     ASSERT_EQUAL(11,N);
     
 
-    char* lines = get_lines_from_file(fin);
-    ASSERT_STR("1235", lines[3]);
+    char **lines3 = get_lines_from_file(fin, &N);  
+    ASSERT_STR("1235", lines3[3]);
     ASSERT_EQUAL(11,N);
 
-        char* lines = get_lines_from_file(fin);
-    ASSERT_STR("katalog", lines[4]);
+    char **lines4 = get_lines_from_file(fin, &N);  
+    ASSERT_STR("katalog", lines4[4]);
     ASSERT_EQUAL(11,N);
 
-    char* lines = get_lines_from_file(fin);
-    ASSERT_STR("process", lines[5]);
+    char **lines5 = get_lines_from_file(fin, &N);  
+    ASSERT_STR("process", lines5[5]);
     ASSERT_EQUAL(11,N);
 }
