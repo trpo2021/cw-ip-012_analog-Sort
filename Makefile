@@ -55,7 +55,7 @@ $(TEST_PATH): $(TEST_OBJECTS) $(LIB_PATH)
 	$(CC) $(LFLAGS) $(TESTFLAGS) -I $(THIRDPARTY) $^ -o $@
 
 $(OBJ_DIR)/$(TEST_DIR)/%.o: $(TEST_DIR)/%.c
-$(CC) $(LFLAGS) $(TESTFLAGS) -I $(THIRDPARTY) -c $< -o $@
+	$(CC) $(LFLAGS) $(TESTFLAGS) -I $(THIRDPARTY) -c $< -o $@
 
 
 .PHONY: clean

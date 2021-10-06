@@ -10,7 +10,7 @@ CTEST(suite_processfile, get_line)
     if (fin == NULL){
         fprintf(stderr, "Error! Can't open test/file_test.txt");
          ASSERT_NOT_NULL(fin);
-    }
+}
     
     char* line = get_line(fin);
     ASSERT_STR("   ", line);
@@ -22,7 +22,7 @@ CTEST(suite_processfile, get_line)
     ASSERT_STR("Math file", line3);
 
     char* line4 = get_line(fin);
-    ASSERT_STR("Math file my program word", line3);
+    ASSERT_STR("Math file my program word", line4);
     
     fclose(fin);
     fclose(line);
