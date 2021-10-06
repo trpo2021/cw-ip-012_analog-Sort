@@ -117,3 +117,24 @@ CTEST(suite_sort, remove_repeats)
 
     free(lines);
 }
+
+CTEST(suite_sort, remove_repeats_noreg)
+{
+    char** lines = calloc(sizeof(char*), 5);
+    lines[0] = "help";
+    lines[1] = "word";
+    lines[2] = "Hello";
+    lines[3] = "hello";
+    lines[4] = "math";
+
+    int N = 5;
+    char** new_lines = remove_repeats_noreg(lines, &N);
+
+    ASSERT_EQUAL(4, N);
+    ASSERT_STR("help", new_lines[0]);
+    ASSERT_STR("word", new_lines[1]);
+    ASSERT_STR("Hello", new_lines[2]);
+    ASSERT_STR("math", new_lines[3]);
+
+    free(lines);
+}
