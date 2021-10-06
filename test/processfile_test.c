@@ -25,10 +25,10 @@ CTEST(suite_processfile, get_line)
     ASSERT_STR("Math file my program word", line4);
     
     fclose(fin);
-    fclose(line);
-    fclose(line2);
-    fclose(line3);
-    fclose(line4);
+    free(line);
+    free(line2);
+    free(line3);
+    free(line4);
     
 }
 CTEST(suite_processfile, get_lines_from_file)

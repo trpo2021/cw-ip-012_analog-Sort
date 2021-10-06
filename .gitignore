@@ -3,4 +3,4 @@
 *.swp
 *.a
 *.so
-bin/analog_sort
+bin/*

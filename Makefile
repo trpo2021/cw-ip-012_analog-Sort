@@ -12,6 +12,8 @@ LDLIBS =
 BIN_DIR = bin
 OBJ_DIR = obj
 SRC_DIR = src
+TEST_DIR = test
+THIRDPARTY = thirdparty
 
 SRC_EXT = c
 
@@ -32,7 +34,6 @@ TEST_OBJECTS = $(TEST_SOURCES:$(TEST_DIR)/%.c=$(OBJ_TEST_PATH)/%.o)
 
 DEPS = $(APP_OBJECTS:.o=.d) $(LIB_OBJECTS:.o=.d) $(TEST_OBJECTS:.o=.d)
 
-
 .PHONY: all
 all: $(APP_PATH)
 
@@ -47,16 +48,14 @@ $(LIB_PATH): $(LIB_OBJECTS)
 $(OBJ_DIR)/%.o: %.c
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
-
 test: CFLAGS += -g
 test: $(TEST_PATH)
 
 $(TEST_PATH): $(TEST_OBJECTS) $(LIB_PATH)
-	$(CC) $(LFLAGS) $(TESTFLAGS) -I $(THIRDPARTY) $^ -o $@
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(LFLAGS) $(TESTFLAGS) -I $(THIRDPARTY) $^ -o $@
 
 $(OBJ_DIR)/$(TEST_DIR)/%.o: $(TEST_DIR)/%.c
-	$(CC) $(LFLAGS) $(TESTFLAGS) -I $(THIRDPARTY) -c $< -o $@
-
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(LFLAGS) $(TESTFLAGS) -I $(THIRDPARTY) -c $< -o $@
 
 .PHONY: clean
 
