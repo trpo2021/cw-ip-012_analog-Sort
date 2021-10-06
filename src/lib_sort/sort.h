@@ -3,6 +3,11 @@
 
 #include <lib_sort/arg.h>
 
+int cmp_register(char*, char*);
+int cmp_register_rev(char*, char*);
+int cmp_noregister(char*, char*);
+int cmp_noregister_rev(char*, char*);
+
 void sort(char** lines, int N, int (*funcComp)(char*, char*));
 
 void sort_process(char** lines, int N, Params params);
