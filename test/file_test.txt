@@ -1,10 +1,11 @@
-Math
-file
-1235
+   
 
+Math file my program word
+1235
 katalog
 process
-katalog
+Katalog
+Class
 Class
 1language
 File
