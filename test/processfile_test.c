@@ -44,26 +44,26 @@ CTEST(suite_processfile, get_lines_from_file)
     
     char* lines = get_lines_from_file(fin);
     ASSERT_STR("   ", lines[0]);
-    ASSERT_EQUAL(11,N)
+    ASSERT_EQUAL(11,N);
     
     char* lines = get_lines_from_file(fin);
     ASSERT_STR("Math file", lines[1]);
-    ASSERT_EQUAL(11,N)
+    ASSERT_EQUAL(11,N);
     
     char* lines = get_lines_from_file(fin);
     ASSERT_STR("Math file my program word", lines[2]);
-    ASSERT_EQUAL(11,N)
+    ASSERT_EQUAL(11,N);
     
 
     char* lines = get_lines_from_file(fin);
     ASSERT_STR("1235", lines[3]);
-    ASSERT_EQUAL(11,N)
+    ASSERT_EQUAL(11,N);
 
         char* lines = get_lines_from_file(fin);
     ASSERT_STR("katalog", lines[4]);
-    ASSERT_EQUAL(11,N)
+    ASSERT_EQUAL(11,N);
 
     char* lines = get_lines_from_file(fin);
     ASSERT_STR("process", lines[5]);
-    ASSERT_EQUAL(11,N)
+    ASSERT_EQUAL(11,N);
 }
