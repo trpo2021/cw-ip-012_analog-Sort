@@ -11,5 +11,4 @@ typedef struct _params {
 
 void opc(Params*, int arg, char** argv);
 
-
 #endif
