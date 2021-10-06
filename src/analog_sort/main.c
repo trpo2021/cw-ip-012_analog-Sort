@@ -33,8 +33,12 @@ int main(int argc, char** argv)
 
     sort_process(lines, N, params);
 
-    if (params.norepeats)
-        lines = remove_repeats(lines, &N);
+    if (params.norepeats) {
+        if (params.noregister)
+            lines = remove_repeats_noreg(lines, &N);
+        else
+            lines = remove_repeats(lines, &N);
+    }
 
     if (params.output)
         printf("\nЗаписано в %s\n", params.output);

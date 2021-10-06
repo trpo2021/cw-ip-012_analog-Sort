@@ -54,6 +54,20 @@ void sort_process(char** lines, int N, Params params)
     }
 }
 
+char** remove_repeats_noreg(char** lines, int* N)
+{
+    int size = *N;
+    char** lines2 = calloc(sizeof(char*), size);
+    int count = 0;
+    lines2[0] = lines[0];
+    for (int i = 0; i < size; i++) {
+        if (strcasecmp(lines[i], lines2[count]) != 0)
+            lines2[++count] = lines[i];
+    }
+    *N = count + 1;
+    return lines2;
+}
+
 char** remove_repeats(char** lines, int* N)
 {
     int size = *N;
